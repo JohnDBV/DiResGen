@@ -62,30 +62,6 @@ int main(int argc, char* argv[])
 	}
 
 	return ErrorCodes::UnknownError;
-
-	/*if ((mandatoryParamsCount > 0) && (mandatoryParamsCount < 1))
-	{
-		std::cout << "Please give the source file path !";
-		return ErrorCodes::NoSourceFile;
-	}
-	else 
-		if ((mandatoryParamsCount > 0) && (mandatoryParamsCount < 2))
-		{
-			std::cout << "Please give the destination file path !";
-			return ErrorCodes::NoDestinationFile;
-		}
-		else
-			if ((mandatoryParamsCount > 0) && (mandatoryParamsCount > 2))
-			{
-				std::cout << "Too many parameters !";
-				return ErrorCodes::TooManyParameters;
-			}
-			else
-			{
-				return ErrorCodes::UnknownError;
-			}
-
-	return generateData();*/
 }
 
 void displayHelp(char* argv0)
