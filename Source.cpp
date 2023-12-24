@@ -18,6 +18,8 @@ enum ErrorCodes
 [[noreturn]] void processCommandLineArguments(int argc, char* argv[]);
 int generateData();
 
+constexpr const char* gitHubPage = "https://github.com/JohnDBV/DiResGen";
+
 int mandatoryParamsCount = 0;
 std::string srcFilePath;
 std::string destFilePath;
@@ -135,7 +137,15 @@ int generateData()
 
 	std::vector<uint8_t> arr = { 1,2,3,4,5,6,7,8,9 };
 
-	//Add the header of the file
+	//Add the credits
+	ss << "//Created under MIT license with DiResGen : " << gitHubPage << std::endl;
+	ss << std::endl;
+
+	//Add include for the c++ language
+	ss << "#include <vector>" << std::endl;
+	ss << std::endl;
+
+	//Add the file content
 	ss << "unsigned long long dataLength = " << dataLength << ";" << std::endl;
 	ss << "std::vector<uint8_t> data = {" << std::endl;
 
